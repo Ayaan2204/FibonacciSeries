@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <conio.h>
 
 
 void main()
@@ -7,21 +7,22 @@ void main()
     int i;
     int j;
     int pre=0;
-    int cur=1;
+    int cur=0;
     int a;
     
     printf("ENTER NUMBER\n");
     scanf("%d",&i);
     printf("FIBONACCI SERIES:\n");
-    if(i>0)
-    {
-        printf("%d \n",pre);
-    }
-    for(j=1;j<i;j++)
+    
+    for(j=0;j<i;j++)
     {
         printf("%d\n",cur);
         a=pre+cur;
         pre=cur;
+        if(a==0)
+        {
+            a=1;
+        }
         cur=a;
     }
     
