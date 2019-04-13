@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+
+
+void main()
+{
+    int i;
+    int j;
+    int pre=0;
+    int cur=1;
+    int a;
+    
+    printf("ENTER NUMBER\n");
+    scanf("%d",&i);
+    printf("FIBONACCI SERIES:\n");
+    if(i>0)
+    {
+        printf("%d \n",pre);
+    }
+    for(j=1;j<i;j++)
+    {
+        printf("%d\n",cur);
+        a=pre+cur;
+        pre=cur;
+        cur=a;
+    }
+    
+}
